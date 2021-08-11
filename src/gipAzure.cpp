@@ -65,7 +65,7 @@ void gipAzure::createContainer(std::string containername){
 		auto outcome = client->create_container(containername).get();
 		if (!outcome.success())
 		{
-				gLogi("Azure") << "Failed to create container, Error: " << outcome.error().code << ", " << outcome.error().code_name ;
+			gLogi("Azure") << "Failed to create container, Error: " << outcome.error().code << ", " << outcome.error().code_name ;
 		}
 	}
 }
