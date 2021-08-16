@@ -5,14 +5,15 @@
 #include <iostream>
 #include <fstream>
 
-#ifndef _WIN32
+//#ifndef _WIN32
 #include <sys/stat.h>
-#endif
+//#endif
 
 #include "blob/blob_client.h"
 #include "logging.h"
 #include "storage_errno.h"
 #include "base64.h"
+#include "constants.h"
 
 namespace azure {  namespace storage_lite {
 
@@ -326,7 +327,6 @@ namespace azure {  namespace storage_lite {
                 logger::log(log_level::error, "Failure to upload the blob in put_blob.  ex.what() = %s, container = %s, blob = %s, sourcePath = %s.", ex.what(), container.c_str(), blob.c_str(), sourcePath.c_str());
                 error_code = unknown_error;
             }
-
             try
             {
                 ifs.close();

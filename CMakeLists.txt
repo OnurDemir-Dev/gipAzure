@@ -14,7 +14,7 @@ set(PREBUILT_DIR ${PLUGIN_DIR}/prebuilts)
 list(APPEND PLUGIN_SRCS
 			${PLUGIN_DIR}/src/gipAzure.cpp
 			${PLUGIN_DIR}/azure/src/blob/blob_client.cpp
-			#${PLUGIN_DIR}/azure/src/blob/blob_client_wrapper.cpp
+			${PLUGIN_DIR}/azure/src/blob/blob_client_wrapper.cpp
 			${PLUGIN_DIR}/azure/src/http/libcurl_http_client.cpp
 			${PLUGIN_DIR}/azure/src/append_block_request_base.cpp
 			${PLUGIN_DIR}/azure/src/base64.cpp
