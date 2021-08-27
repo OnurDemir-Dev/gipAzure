@@ -51,7 +51,8 @@ list(APPEND PLUGIN_SRCS
 list(APPEND PLUGIN_INCLUDES
 			${PLUGIN_DIR}/src
 			${PREBUILT_DIR}/include
-			${PLUGIN_DIR}/azure/include)
+			${PLUGIN_DIR}/azure/include
+			)
 
 
 ##### PLUGIN DEPENDENCY LOCATIONS (IF ANY) #####
@@ -76,6 +77,10 @@ endif(WIN32)
 ##### PLUGIN DEPENDENCY LINKING (IF ANY) #####					
 if(WIN32)
 	list(APPEND PLUGIN_LINKLIBS
+		ssl
+		crypto
+		bcrypt
+		Rpcrt4
 	)
 elseif(LINUX)
 	list(APPEND PLUGIN_LINKLIBS
