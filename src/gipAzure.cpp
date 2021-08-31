@@ -139,7 +139,6 @@ void gipAzure::downloadBlob(std::string containername, std::string blobname, std
 
 void gipAzure::uploadBlob(std::string container, std::string fullpath) {
 	if (containerExists(container)) {
-		gLogi("Azure") << fullpath;
 		std::ifstream fin(fullpath, std::ios_base::in | std::ios_base::binary);
 		std::vector<std::pair<std::string, std::string>> metadata;
 		metadata.emplace_back(std::make_pair("meta_key1", "meta-value1"));
